@@ -48,7 +48,7 @@ public class Prueba1Application implements CommandLineRunner {
 		c1.setNombre(nNombre);
 		System.out.println(c1);
 		clienteService.actualizarCliente(c1);
-		System.out.println("Se ha modificado el cliente:"+clienteService.buscarClientePorId(c1.getId()));				
+		System.out.println("Cliente modificado:"+clienteService.buscarClientePorId(c1ID));				
 	}
 
 }

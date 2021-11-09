@@ -1,6 +1,7 @@
 package com.curso.prueba1.entities;
 
 import java.util.List;
+import javax.transaction.Transactional;
 
 import javax.persistence.EntityManager;
 
@@ -39,6 +40,7 @@ public class ClienteDaoImpl implements ClienteDaoI{
 	}
 
 	@Override
+	@Transactional
 	public void actualizarCliente(Cliente cliente) {
 		Session session = entityManager.unwrap(Session.class);
 		session.update(cliente);
